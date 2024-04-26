@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  xampp:
+    image: tomsik68/xampp:8
+    ports:
+      - "80:80"
+      - "82:82"
+      - "81:22"
+    volumes:
+      - ./www2:/www
+      - ./config/apache2:/opt/lampp/apache2/conf.d
+      - ./config/etc/httpd.conf:/opt/lampp/etc/httpd.conf
+
